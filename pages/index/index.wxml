@@ -1,13 +1,26 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <!--<view class="userinfo">-->
+    <!--<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>-->
+    <!--<block wx:else>-->
+      <!--<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>-->
+      <!--<text class="userinfo-nickname">{{userInfo.nickName}}</text>-->
+    <!--</block>-->
+  <!--</view>-->
+  <!--<view class="usermotto">-->
+    <!--<text class="user-motto">{{motto}}</text>-->
+  <!--</view>-->
+  <view class="top-banner">
+    <view class="b-cont" bindtap="bindViewTap">
+      <view class="b-money">
+        <img src=""/>
+        <p>1000元～5万元</p>
+      </view>
+      <ul>
+        <li>额度范围<p>1万-2<span>万</span></p></li>
+        <li>借款期限<p>3-24<span>个月</span></p></li>
+        <li>年化利率<p>36<span>%</span></p></li>
+      </ul>
+    </view>
   </view>
 </view>

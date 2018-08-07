@@ -1,12 +1,22 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/auth/auth"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#3a4a5a",
+    "navigationBarTitleText": "WeChat-demo",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar":{
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"首页"
+    },{
+      "pagePath":"pages/logs/logs",
+      "text":"日志"
+    }]
   }
 }
