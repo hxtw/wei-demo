@@ -7,12 +7,52 @@ Page({
         motto: 'Hello World',
         userInfo: {},
         hasUserInfo: false,
-        canIUse: wx.canIUse('button.open-type.getUserInfo')
+        canIUse: wx.canIUse('button.open-type.getUserInfo'),
+        text:'init data',
+        num:0,
+        array:[{text:'init data'}],
+        object:{
+            text:'init data'
+        },
+        array:[{
+            message:'foo'
+        },{
+            message:'bar'
+        }]
+    },
+    changeText(){
+        this.setData({
+            text:'changed data'
+        });
+    },
+    changeNum(){
+        this.data.num++;
+        this.setData({
+            num:this.data.num
+        });
+    },
+    changeItemInArray(){
+        this.setData({
+            'array[0].text':'changed data'
+        });
+    },
+    changeItemInObject(){
+        this.setData({
+            'object.text':'changed object'
+        });
+    },
+    addNewField(){
+        this.setData({
+            'newField.text':'new data'
+        });
     },
     //事件处理函数
     bindViewTap: function () { console.log('123')
-        wx.navigateTo({
+        wx.navigateTo({//跳转
             url: '../auth/auth'
+        })
+        wx.redirectTo({//重定向
+            url:'../auth/auth'
         })
     },
     onLoad: function () {
@@ -43,8 +83,18 @@ Page({
             })
         }
     },
-    onLaunch: function (e) {
-        console.log(e);
+    onPullDownRefresh(){//用户下拉刷新，需要在app.json window 选项中配置 enablePullDownRefresh 为 true
+        console.log("监听用户下拉刷新")
+    },
+    onReachBottom(){//用户下拉刷新，需要在app.json window 选项中配置 onReachBottomDistance 为 true
+        console.log("监听用户上拉触底事件")
+    },
+    onPageScroll(){},
+    onTabltemTap(e){
+        console.log(e)
+    },
+    getMoney(){
+        console.log("haode")
     },
     getUserInfo: function (e) {
         console.log(e)

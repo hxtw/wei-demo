@@ -8,7 +8,9 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#3a4a5a",
     "navigationBarTitleText": "WeChat-demo",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh" : true,
+    "onReachBottomDistance" : true
   },
   "tabBar":{
     "list":[{

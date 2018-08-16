@@ -10,6 +10,7 @@
   <!--<view class="usermotto">-->
     <!--<text class="user-motto">{{motto}}</text>-->
   <!--</view>-->
+  <view class="main">
   <view class="top-banner">
     <view class="b-cont" bindtap="bindViewTap">
       <view class="b-money">
@@ -22,5 +23,25 @@
         <li>年化利率<p>36<span>%</span></p></li>
       </ul>
     </view>
+  </view>
+  <view>{{text}}</view>
+  <button bindtap="changeText">Change normal data</button>
+  <view>{{num}}</view>
+  <button bindtap="changeNum">change normal num</button>
+  <view>{{array[0].text}}</view>
+  <button bindtap="changeItemInArray">change array num</button>
+  <view>{{object.text}}</view>
+  <button bindtap="changeItemInObject">change object num</button>
+  <view>{{newField.text}}</view>
+  <button bindtap="addNewField">Add new data</button>
+  <view wx:for="{{array}}">
+    {{index}} : {{item.message}}
+  </view>
+  <view wx:for="{{array}}">
+    {{index}} : {{item.message}}
+  </view>
+  </view>
+  <view class="b-button" bindtap="getMoney">
+    马上拿钱
   </view>
 </view>
