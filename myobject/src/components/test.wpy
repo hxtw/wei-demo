@@ -1,0 +1,15 @@
+<template>
+    <p>何先生</p>
+    <p>10<span>万元</span>36<span>月</span></p>
+    <p>2018/9/12</p>
+</template>
+
+<script>
+    export default {
+        name: ""
+    }
+</script>
+
+<style scoped>
+
+</style>

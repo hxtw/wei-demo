@@ -76,6 +76,10 @@
       <list></list>
     </panel>
 
+    <panel>
+      <view @tap="goTest">跳转test1</view>
+    </panel>
+
     <toast />
   </view>
 </template>
@@ -219,6 +223,11 @@
             }
           })
         }
+      },
+      goTest(){
+        wx.navigateTo({
+          url:'test1'
+        });
       },
       counterEmit (...args) {
         let $event = args[args.length - 1]

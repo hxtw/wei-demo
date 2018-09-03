@@ -1,0 +1,41 @@
+<template>
+  <p @tap="getList">何先生</p>
+  <p>10<span>万元</span>36<span>月</span></p>
+  <p>2018/9/12</p>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import { connect } from 'wepy-redux'
+
+  export default class Test1 extends wepy.page {
+    data = {
+      listData:[],
+    }
+    methods = {
+      getList(){
+        console.log('ss')
+        wx.request({
+          url:'index.json',
+          method:'GET',
+          success:function(res){
+            if(res.rs_code == '1000'){
+              console.log(res.details)
+            }
+          }
+        })
+      }
+    }
+
+    onLoad(){
+      let that = this;
+
+    }
+    onShow(){
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>
