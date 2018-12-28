@@ -1,0 +1,68 @@
+<view class="container">
+    <view class="userinfo">
+        <view class="us-cont" bindtap="goDetail">
+            <view class="us-first">
+                <text>受检人：沈鸿</text>
+                <text class="us-icon">已预约</text>
+            </view>
+            <view class="us-information">
+                <text>预约时间：2018-12-20</text>
+            </view>
+            <view class="us-address">
+                <text>预约分院：北京潘家园分院</text>
+                <image src="../../image/icon_right.png" style="width:16rpx;height:30rpx"/>
+            </view>
+            <view class="us-information">
+                <text>体检项目：慈铭体检套餐</text>
+            </view>
+        </view>
+        <view class="us-button">
+            <p class="cancel" bindtap="changeApp">取消预约</p>
+            <p class="edit">修改预约</p>
+        </view>
+    </view>
+    <view class="userinfo">
+        <view class="us-cont">
+            <view class="us-first">
+                <text>受检人：沈鸿</text>
+                <text class="us-icon">已预约</text>
+            </view>
+            <view class="us-information">
+                <text>预约时间：2018-12-20</text>
+            </view>
+            <view class="us-address">
+                <text>预约分院：北京潘家园分院</text>
+                <image src="../../image/icon_right.png" style="width:16rpx;height:30rpx"/>
+            </view>
+            <view class="us-information">
+                <text>体检项目：慈铭体检套餐</text>
+            </view>
+        </view>
+        <view class="us-button">
+            <p class="cancel" bindtap="changeApp">取消预约</p>
+            <p class="edit">修改预约</p>
+        </view>
+    </view>
+    <view class="userinfo">
+        <view class="us-cont">
+            <view class="us-first">
+                <text>受检人：沈鸿</text>
+                <text class="us-icon">已预约</text>
+            </view>
+            <view class="us-information">
+                <text>预约时间：2018-12-20</text>
+            </view>
+            <view class="us-address">
+                <text>预约分院：北京潘家园分院</text>
+                <image src="../../image/icon_right.png" style="width:16rpx;height:30rpx"/>
+            </view>
+            <view class="us-information">
+                <text>体检项目：慈铭体检套餐</text>
+            </view>
+        </view>
+        <view class="us-button">
+            <p class="cancel" bindtap="changeApp">取消预约</p>
+            <p class="edit">修改预约</p>
+        </view>
+    </view>
+</view>

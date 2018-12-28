@@ -1,0 +1,51 @@
+/* pages/information/information.wxss */
+.top-head{
+    font-size:32rpx;
+    color:#333333;
+    height:112rpx;
+    line-height:112rpx;
+    border-bottom:1rpx solid #F3F3F3;
+    padding:0rpx 50rpx;
+}
+.in-input{
+    display: flex;
+    height:100rpx;
+    line-height:100rpx;
+    border-bottom:1rpx solid #F3F3F3;
+    padding:0 50rpx;
+    font-size:32rpx;
+    color:#4E4E4E;
+}
+.in-input lable{
+    flex: 1;
+    text-align: left;
+}
+.in-input input{
+    border:none;
+    outline: none;
+    height:100rpx;
+    line-height:100rpx;
+    color:#4E4E4E;
+}
+
+.in-input picker{
+    flex: 1;
+    text-align: right;
+    margin-right:20rpx;
+}
+.in-input image{
+    text-align: right;
+    margin-top:38rpx;
+}
+.btn-area button{
+    width:602rpx;
+    height:80rpx;
+    line-height:80rpx;
+    background:-webkit-linear-gradient(left,#7EABEB,#4873D2);
+    border-radius: 50rpx;
+    color:#ffffff;
+    font-size:36rpx;
+    position: fixed;
+    left:60rpx;
+    bottom: 10rpx;
+}

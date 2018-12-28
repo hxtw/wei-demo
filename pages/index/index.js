@@ -1,54 +1,106 @@
-//index.js
-//获取应用实例
+// //index.js
+// //获取应用实例
 const app = getApp()
 
+import WxValidate from '../../utils/WxValidate.js'
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+    data: {
+        userInfo: {},
+        isClear: false,
+        canIUse: wx.canIUse('button.open-type.getUserInfo'),
+        username: '',
+        isErr: false,
+        errMsg: '',
+        formData: {
+            txm: '',
+            username: ''
         }
-      })
+    },
+    onLaunch() {
+        this.initValidate();
+    },
+    onShow(){
+        this.initValidate();
+
+    },
+    showModal(error) {
+        this.setData({
+            isErr:true,
+            errMsg:error.msg
+        });
+        // wx.showModal({
+        //       content: error.msg,
+        //        showCancel: false,
+        //    })
+         },
+    initValidate() {
+        const rules = {
+            txm: {
+                required: true,
+                minlength: 11
+            },
+            username: {
+                required: true,
+                rangelength: [2, 4]
+            },
+        }
+        const messages = {
+            txm: {
+                required: '请输入条码号',
+                minlength: '请输入11位以上的条码号'
+            },
+            username: {
+                required: '请输入姓名',
+                rangelength: '请输入2~4个汉字'
+            },
+        }
+        this.WxValidate = new WxValidate(rules,messages);
+    },
+    formSubmit(e) {
+        let that = this;
+        var params = e.detail.value;
+        // if(!this.WxValidate.checkForm(params)){
+        //     const error = this.WxValidate.errorList[0];
+        //     this.showModal(error);
+        //     return false;
+        // }
+        // wx.request({
+        //     url: host + url,
+        //     data: postData,
+        //     method: 'POST',
+        //     success: function (res) {
+        //         if (typeof doSuccess == "function") {
+        //             // doSuccess(res);
+        //         }
+        //     },
+        //     fail: function () {
+        //         if (typeof doFail == "function") {
+        //             // doFail();
+        //         }
+        //     },
+        // });
+        wx.navigateTo({
+            url: '../information/information'
+        })
+
+    },
+    bindKeyInput(e) {
+        this.setData({
+            isClear: true
+        });
+    },
+    clearInput() {
+        let that = this;
+        var username = 'formData.username';
+        this.setData({
+            [username]: '',
+            isClear: false
+        });
+    },
+    goMyapp(){
+        wx.navigateTo({
+            url:'../myApp/myApp'
+        });
     }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+
 })

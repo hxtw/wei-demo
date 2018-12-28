@@ -1,0 +1,7 @@
+{
+  "backgroundColor": "red",
+  "usingComponents": {
+    "calendar": "plugin://calendar/calendar",
+    "clickCalendar":"/components/calendar/calendar"
+  }
+}

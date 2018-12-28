@@ -1,12 +1,23 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/information/information",
+    "pages/choseTime/choseTime",
+    "pages/choseBranch/choseBranch",
+    "pages/myApp/myApp",
+    "pages/appDetail/appDetail"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "预约体检",
     "navigationBarTextStyle":"black"
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
   }
 }

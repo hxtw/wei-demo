@@ -1,0 +1,52 @@
+/* pages/myApp/myApp.wxss */
+page{
+    background-color:#F4F7F9;
+}
+.userinfo{
+    background-color:#ffffff;
+    margin:10rpx 20rpx;
+    border-radius: 20rpx;
+}
+.userinfo .us-cont{
+    padding:20rpx 30rpx 20rpx 50rpx;
+    border-bottom:1rpx solid #f3f3f3;
+}
+.userinfo .us-information, .userinfo .us-address{
+    font-size:28rpx;
+    color:#666666 ;
+    padding-top:15rpx;
+}
+.userinfo .us-first {
+    font-size:30rpx;
+    color:#333333;
+    display: flex;
+}
+.us-first .us-icon{
+    flex: 1;
+    text-align: right;
+    color:#4873D2;
+}
+.userinfo .us-address{
+    display: flex;
+}
+.userinfo image{
+    margin-left:270rpx;
+}
+.us-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right:20rpx;
+}
+.us-button p{
+    width:190rpx;
+    height:60rpx;
+    line-height:60rpx;
+    font-size:26rpx;
+    color:#4873D2;
+    border:1rpx solid #4873D2;
+    border-radius: 40rpx;
+    text-align: center;
+    background: transparent;
+    margin:20rpx 0rpx 20rpx 15rpx;
+}

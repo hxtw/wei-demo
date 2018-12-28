@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="line"></view>
+    <view class="ch-branch">
+        <text class="top-head">选择体检分院</text>
+        <view class="ch-address" bindtap="goBranch">
+            <text class="ad-title">北京潘家园分院</text>
+            <view class="ad-content">
+                <text>北京市朝阳区潘家园9号濠景阁大厦1-2层（肿瘤医院北200米路口）</text>
+                <image src="../../image/icon_right.png" style="width:16rpx; height:30rpx"/>
+            </view>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="ch-time">
+        <text class="ti-head">选择日期</text>
+        <calendar  calendar-style="calendar"  header-style="calendar-header"  board-style="calendar-board"
+                   days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" />
+        <!--<clickCalendar selected="{{selected}}" bindselect="bindselect" bindgetdate="bindgetdate" />-->
+    </view>
+    <view class="btn-area">
+        <button bindtap="submit">提交</button>
+    </view>
+    <view wx:if="{{isAlert}}" class="re-alert">
+        <view class="re-cont">
+            <view class="re-image"><image src="../../image/icon_suc.png" style="width:102rpx;height:102rpx;"/></view>
+            <view class="re-msg">您已成功预约</view>
+            <button bindtap="goNext" data-type="1">查看我的预约</button>
+            <button bindtap="goNext" data-type="2">返回预约首页</button>
+        </view>
+    </view>
+</view>

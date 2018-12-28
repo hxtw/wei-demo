@@ -1,0 +1,48 @@
+<view class="container">
+    <p class="top-head">为了找到更适合您的体检项目，请填写该信息</p>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="in-input">
+        <label>送检机构：</label>
+        <picker disabled>
+        <input placeholder-style="color:#AAAAAA;font-size:32rpx;" type="text" name="company" value="{{formData.company}}" readonly   placeholder="请选择送检机构"/>
+        </picker>
+        <image src="../../image/icon_right.png" style="width:16rpx; height:30rpx"/>
+    </view>
+    <view class="in-input">
+        <label>出生日期：</label>
+        <picker
+                mode="date"
+                value="{{date}}"
+                start="1917-01-01"
+                end="{{endTime}}"
+                bindchange="bindDateChange">
+        <input type="text" name="brith" value="{{formData.birthDate}}" readonly  placeholder="请选择出生日期"/>
+        </picker>
+        <image src="../../image/icon_right.png" style="width:16rpx; height:30rpx"/>
+    </view>
+    <view class="in-input">
+        <label>性别：</label>
+        <picker bindchange="bindPickerChange" data-type="{{'1'}}"  value="{{sexArray[index].id}}"  range="{{sexArray}}" range-key="{{'name'}}">
+            <input type="text" name="sex" value="{{sexArray[sexIndex].name}}" readonly  placeholder="请选择性别"/>
+        </picker>
+        <image src="../../image/icon_right.png" style="width:16rpx; height:30rpx"/>
+    </view>
+    <view class="in-input">
+        <label>婚否：</label>
+        <picker bindchange="bindPickerChange" data-type="{{'2'}}"  value="{{marryArray[index].id}}"  range="{{marryArray}}" range-key="{{'name'}}">
+            <input type="text" name="marry" value="{{marryArray[marryIndex].name}}" readonly  placeholder="请选择婚否"/>
+        </picker>
+        <image src="../../image/icon_right.png" style="width:16rpx; height:30rpx"/>
+    </view>
+    <view class="in-input">
+        <label>人种：</label>
+        <picker bindchange="bindPickerChange" data-type="{{'3'}}" value="{{raceArray[index].id}}"  range="{{raceArray}}" range-key="{{'name'}}">
+            <input type="text" name="race" value="{{raceArray[raceIndex].name}}" readonly  placeholder="请选择人种"/>
+        </picker>
+        <image src="../../image/icon_right.png" style="width:16rpx; height:30rpx"/>
+    </view>
+    <view class="btn-area">
+        <button form-type="submit">下一步</button>
+    </view>
+    </form>
+</view>

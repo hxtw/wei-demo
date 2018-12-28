@@ -1,0 +1,50 @@
+.branch-list{
+    display: flex;
+    align-items: center;
+    height:190rpx;
+    border-bottom:1rpx solid #F3F3F3;
+    padding:0 50rpx;
+}
+.branch-list .b-cont{
+    flex: 1;
+}
+
+radio .wx-radio-input{
+    border-radius: 50%;
+    height: 34rpx;
+    width: 34rpx;
+    margin-top: -100rpx;
+}
+radio .wx-radio-input.wx-radio-input-checked::before{
+    background-color: #4873D2;
+    border:none;
+    border-radius: 50%;/* 圆角 */
+    width: 38rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+    height: 38rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+    line-height: 38rpx;
+    text-align: center;
+    font-size:27rpx; /* 对勾大小 30rpx */
+    color:#fff; /* 对勾颜色 白色 */
+    transform:translate(-50%, -50%) scale(1);
+    -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.branch-list .b-title{
+    font-size:30rpx;
+    color:#333333;
+}
+.branch-list text{
+    font-size:28rpx;
+    color:#666666;
+}
+.btn-area button{
+    width:602rpx;
+    height:80rpx;
+    line-height:80rpx;
+    background:-webkit-linear-gradient(left,#7EABEB,#4873D2);
+    border-radius: 50rpx;
+    color:#ffffff;
+    font-size:36rpx;
+    position: fixed;
+    left:60rpx;
+    bottom: 10rpx;
+}

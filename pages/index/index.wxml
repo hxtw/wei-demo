@@ -1,13 +1,30 @@
-<!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="userinfo">
+            <image src="../../image/txm.png" style="width:44rpx;height:36rpx"/>
+            <input type="number" name="txm" value="{{formData.txm}}" placeholder="请输入条码号"/>
+            <image src="../../image/sm.png" style="width:45rpx;height:43rpx"/>
+        </view>
+        <view class="userinfo">
+            <image src="../../image/xm.png" style="width:36rpx;height:40rpx"/>
+            <input name="username" value="{{formData.username}}" bindinput="bindKeyInput" placeholder="请输入姓名"/>
+            <image class="in_close" wx:if="{{isClear}}" bindtap="clearInput" src="../../image/in_close.png"
+                   style="width:20rpx;height:20rpx;"/>
+        </view>
+        <view wx:if="{{isErr}}" class="errMsg">
+            <p>{{errMsg}}</p>
+        </view>
+        <view class="scan">
+            <div class="s-font">
+                <p>扫一扫</p>
+                <p>输入导诊册条形码</p>
+            </div>
+        </view>
+        <view class="goMyapp" bindtap="goMyapp">
+            <p>查看我的预约</p>
+        </view>
+        <view class="btn-area">
+            <button form-type="submit">下一步</button>
+        </view>
+    </form>
 </view>

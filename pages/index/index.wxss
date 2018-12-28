@@ -1,21 +1,73 @@
 /**index.wxss**/
-.userinfo {
+.container{
+    align-items: center;
+}
+.userinfo{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items:flex-end;
+    height:160rpx;
+  border-bottom:2rpx solid #F3F3F3;
+  /*border:1rpx solid red;*/
+  padding-bottom:10rpx;
+    width:600rpx;
+    position:relative;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.userinfo input{
+  margin-left:50rpx;
+  border:none;
+  outline: none;
+  font-size:30rpx;
+    /*width:320rpx;*/
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.userinfo input::placeholder{
+  color:#333333;
 }
-
-.usermotto {
-  margin-top: 200px;
+.userinfo image{
+    padding-left:10rpx;
+}
+.userinfo image:last-child{
+    margin-left:85rpx;
+}
+.userinfo .in_close{
+    padding-left:30rpx;
+}
+.scan{
+    width:353rpx;
+    height:353rpx;
+    border-radius: 50%;
+    background:-webkit-linear-gradient(left,#7EABEB,#4873D2);
+    margin-top:132rpx;
+    margin-left:120rpx;
+}
+.scan .s-font{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top:110rpx;
+    color:#ffffff;
+    font-size:36rpx;
+}
+.errMsg{
+    font-size:26rpx;
+    color:#F55823;
+    margin-top:20rpx;
+}
+.goMyapp{
+    padding-top:150rpx;
+}
+.goMyapp p{
+    font-size:32rpx;
+    color:#375599;
+    border-bottom:1rpx solid #375599;
+}
+.btn-area button{
+    width:602rpx;
+    height:80rpx;
+    line-height:80rpx;
+    background:-webkit-linear-gradient(left,#7EABEB,#4873D2);
+    border-radius: 50rpx;
+    color:#ffffff;
+    font-size:36rpx;
+    margin-top:60rpx;
 }

@@ -1,0 +1,131 @@
+.ch-branch{
+    background-color:#ffffff;
+    margin-top:20rpx;
+}
+.line{
+    display: block;
+    height:20rpx;
+    background-color:#F4F7F9;
+}
+.ch-branch .top-head{
+    height:109rpx;
+    line-height:109rpx;
+    font-size:30rpx;
+    color:#333333;
+    border-bottom:1rpx solid #F3F3F3;
+    width:100%;
+    display:block;
+    padding:0 50rpx;
+    font-weight: bold;
+}
+.ch-address{
+    margin:30rpx 50rpx;
+    display: flex;
+    flex-direction: column;
+}
+.ch-address .ad-title, .ch-time{
+    font-size:30rpx;
+    color:#333333;
+}
+.ch-address .ad-title{
+    font-weight: 100;
+    padding-bottom:10rpx;
+}
+.ch-address .ad-content{
+    font-size:28rpx;
+    color:#666666;
+    display: flex;
+    flex-direction: row;
+}
+.ch-address image{
+    text-align: right;
+    margin-left:20rpx;
+    margin-top:10rpx;
+}
+.ch-time{
+    font-weight: bold;
+    background-color:#ffffff;
+    margin-top:20rpx;
+}
+.ch-time .ti-head{
+    padding:0 50rpx;
+    border-bottom:1rpx solid #F3F3F3;
+    height:90rpx;
+    line-height:90rpx;
+    display:block;
+    margin-bottom:30rpx;
+}
+.btn-area button{
+    width:602rpx;
+    height:80rpx;
+    line-height:80rpx;
+    background:-webkit-linear-gradient(left,#7EABEB,#4873D2);
+    border-radius: 50rpx;
+    color:#ffffff;
+    font-size:36rpx;
+    position: fixed;
+    left:60rpx;
+    bottom: 10rpx;
+}
+/*----------日历-----------------*/
+.calendar {
+    background-color:white;
+    padding-top: 10px;
+}
+.calendar-header{
+    font-size: 30rpx;
+    color: #333333;
+}
+.calendar-board{
+    color: #333333;
+    font-weight: bold;
+    font-size:28rpx;
+}
+.days_style{
+    font-size:28rpx;
+    color:#333333;
+    border:1rpx solid #1AAD19;
+}
+
+/*---------弹窗------------------*/
+.re-alert{
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:99;
+    align-items: center;
+}
+.re-cont{
+    width:640rpx;
+    height:568rpx;
+    background-color:#ffffff;
+    border-radius: 20rpx;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.re-cont .re-image{
+    display: flex;
+    justify-content: center;
+    margin-top:50rpx;
+}
+.re-cont .re-msg{
+    font-size:32rpx;
+    color:#333333;
+    text-align: center;
+    margin-top:10rpx;
+}
+.re-cont button{
+    background:-webkit-linear-gradient(left,#7EABEB,#4873D2);
+    font-size:30rpx;
+    color:#ffffff;
+    border-radius: 50rpx;
+    width:490rpx;
+    height:80rpx;
+    line-height:80rpx;
+    margin-top:50rpx;
+}

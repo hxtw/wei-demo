@@ -1,0 +1,51 @@
+page{
+    background-color:#F4F7F9;
+}
+.project-msg{
+    background-color:#ffffff;
+}
+.project-msg .pro-top{
+    display: flex;
+}
+.pro-top .pro-status{
+    flex: 1;
+    text-align: right;
+    color:#4873D2;
+    font-weight: normal;
+}
+.project-msg .pro-top, .project-msg .pro-cont, .project-msg .pro-cont3{
+    padding:20rpx 40rpx 20rpx 40rpx;
+}
+.project-msg .pro-top{
+    height:90rpx;
+    line-height:90rpx;
+    font-size:30rpx;
+    color:#333333;
+    border-bottom:1rpx solid #f3f3f3;
+    font-weight: bold;
+}
+.project-msg .pro-cont view, .project-msg .pro-cont3 view{
+    font-size:28rpx;
+    color:#666666;
+    margin-top:20rpx;
+}
+.project-msg .pro-cont3{
+    border-bottom:1rpx solid #f3f3f3;
+}
+.us-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-right:40rpx;
+}
+.us-button p{
+    background:transparent;
+    width:190rpx;
+    height:60rpx;
+    line-height:60rpx;
+    color:#4873D2;
+    font-size:26rpx;
+    border:1rpx solid #4873D2;
+    border-radius: 40rpx;
+    text-align: center;
+    margin:20rpx 0 20rpx 20rpx;
+}
